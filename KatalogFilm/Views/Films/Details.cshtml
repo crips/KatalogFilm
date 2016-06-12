@@ -1,0 +1,42 @@
+﻿@model KatalogFilm.Models.Film
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Film</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaFilm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamaFilm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TahunRilis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TahunRilis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.NamaGenre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre.NamaGenre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdFilm }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
